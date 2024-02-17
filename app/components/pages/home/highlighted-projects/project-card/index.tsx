@@ -10,7 +10,7 @@ const ProjectCard = () => {
                 <Image
                 width={420}
                 height={304}
-                src="/images/perfil.png"
+                src="/images/mapa-image.png"
                 alt="projeto"
                 className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"
                 />
