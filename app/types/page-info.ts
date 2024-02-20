@@ -26,6 +26,14 @@ export type HomePageInfo = {
     highlightProjects: Project[]
 }
 
+
+export type ProjectsPageStaticData = {
+    projects: {
+        slug: string
+    }[]
+}
+
+
 export type ProjectPageData = {
     project: Project
 }
