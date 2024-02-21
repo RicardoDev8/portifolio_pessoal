@@ -3,6 +3,8 @@
 import { TbArrowNarrowUp } from "react-icons/tb";
 import Button from "../button";
 import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
 
 const BackToTop = () => {
     const [show, setShow] = useState(false)
@@ -13,9 +15,9 @@ const BackToTop = () => {
 
 
     const handleScroll = useCallback(() => {
-        if(!show && window.scrollY > 900){
+        if(!show && window.scrollY > 700){
             setShow(true)
-        }else if(show && window.scrollY <= 900){
+        }else if(show && window.scrollY <= 700){
             setShow(false)
         }
     }, [show])
@@ -25,17 +27,22 @@ const BackToTop = () => {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [handleScroll])
 
-    return ( 
-        <div className="fixed right-4 bottom-4 z-20" >
+    return (
+        <AnimatePresence>
             {show ? (
+        <motion.div 
+            className="fixed right-4 bottom-4 z-20"
+            initial={{ opacity: 0, right: -10 }}
+            animate={{ opacity: 1, right: 16 }}
+            exit={{ opacity: 0, right: -10 }}
+            >
             <Button onClick={scrollToTop} className="shadow-lg shadow-indigo-400/20" >
                 <TbArrowNarrowUp size={20}/>
             </Button>
-            ) : (
-                null
-            )}
-        </div>
-     );
+        </motion.div>
+    ) : null}
+        </AnimatePresence>
+    )
 }
  
 export default BackToTop;

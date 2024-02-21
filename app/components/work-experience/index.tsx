@@ -2,6 +2,7 @@ import SectionTitle from "../section-title";
 import ExperienceItem from "./experience-item";
 import { WorkExperience as IWorkExperience } from '../../types/work-experience'
 
+
 type WorkExperienceProps = {
     experiences: IWorkExperience[]
 }
