@@ -11,9 +11,9 @@ type ProjectProps = {
    }
 }
 
-export const metadata = {
-  title: "Project"
-}
+// export const metadata = {
+//   title: "Project"
+// }
 
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
 
