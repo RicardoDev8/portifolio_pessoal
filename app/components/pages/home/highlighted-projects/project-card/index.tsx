@@ -47,10 +47,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     transition={{duration: 0.7}}
                     >
                     <Image
-                    width={20}
-                    height={20}
+                    width={40}
+                    height={40}
                     alt=""
-                    src="/images/icons/project-title-icon.svg"
+                    src="/images/icons/hricon01.png"
                     />
                     {project.title}
                 </motion.h3>
