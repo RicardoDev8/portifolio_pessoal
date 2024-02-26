@@ -23,7 +23,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
         }
     }
 
-    console.log(homeInfo.introduction)
+
 
     return ( 
         <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px] " >
