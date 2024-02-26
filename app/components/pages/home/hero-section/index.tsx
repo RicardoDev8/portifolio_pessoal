@@ -75,6 +75,7 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
                                         />
                                         
                                     </a>
+                                    
                                 ))}
                             </div>
                         </div>
